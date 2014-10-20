@@ -1,0 +1,113 @@
+<doctype html>
+<html>
+<head>
+    <title>t9 emulator</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="app-wrap">
+        <input type="text" class="num-str-input">
+        <div class="text-field">
+            <span class="text"></span>
+            <span class="current-word"></span>
+        </div>
+
+        <div class="completed-words">
+            
+        </div>
+
+        <div class="actions">
+            <button class="btn-action btn-action-cycle">Next word</button>
+        </div>
+
+        <div class="keypad">
+            <div class="keypad-row">
+                <button class="btn-keypad">
+                    <i>1</i>
+                    <div></div>
+                </button>
+                <button class="btn-keypad" value="2">
+                    <i>2</i>
+                    <div>абвг</div>
+                </button>
+                <button class="btn-keypad" value="3">
+                    <i>3</i>
+                    <div>дежз</div>
+                </button>
+            </div>
+
+            <div class="keypad-row">
+                <button class="btn-keypad" value="4">
+                    <i>4</i>
+                    <div>ийкл</div>
+                </button>
+                <button class="btn-keypad" value="5">
+                    <i>5</i>
+                    <div>мноп</div>
+                </button>
+                <button class="btn-keypad" value="6">
+                    <i>6</i>
+                    <div>рсту</div>
+                </button>
+            </div>
+
+            <div class="keypad-row">
+                <button class="btn-keypad" value="7">
+                    <i>7</i>
+                    <div>фхцч</div>
+                </button>
+                <button class="btn-keypad" value="8">
+                    <i>8</i>
+                    <div>шщъы</div>
+                </button>
+                <button class="btn-keypad" value="9">
+                    <i>9</i>
+                    <div>ьэюя</div>
+                </button>
+            </div>
+
+            <div class="keypad-row">
+                <button class="btn-keypad">
+                    <i>*</i>
+                    <div></div>
+                </button>
+                <button class="btn-keypad">
+                    <i>0</i>
+                    <div></div>
+                </button>
+                <button class="btn-keypad">
+                    <i>#</i>
+                    <div></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <ul class="predictions">
+
+    </ul>
+    
+    <script src="./js/build.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function(){
+        //get dictionary, init app
+        var request = new XMLHttpRequest();
+        request.open('GET', '../data/ru.words.txt', true);
+
+        request.onload = function() {
+            if (request.status >= 200 && request.status < 400){
+                resp = request.responseText;
+
+                App.init(resp.split(/\s+/g));
+            }
+        };
+
+        request.onerror = function() {
+            throw("There was an error while loading dictionary");
+        };
+
+        request.send();
+    });
+    </script>
+</body>
+</html>
