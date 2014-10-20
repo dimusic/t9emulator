@@ -92,7 +92,7 @@
             depth = depth || 0;
 
         // force exact for words with less than 3 characters
-        if (numStr.length < 3) {
+        if (numStr.length <= 3) {
             exact = true;
         }
 

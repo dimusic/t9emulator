@@ -137,7 +137,7 @@
             var currentWord = this.getCurrentWord(),
                 predictions = this.autocompletePredictions;
 
-            if (currentWord.length > 2) {
+            if (currentWord.length > 3) {
                 predictions = predictions.filter(function (el) {
                     return el !== currentWord
                         && el.length >= currentWord.length
