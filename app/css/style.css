@@ -1,0 +1,41 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.keypad-row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.app-wrap {
+  float: left; }
+
+.num-str-input {
+  width: 190px;
+  margin-bottom: 5px;
+  padding: 2px 5px;
+  font-size: 16px;
+  border: 1px solid #bababa; }
+
+.actions {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.keypad-row {
+  margin-bottom: 5px;
+  margin-left: -5px; }
+
+.btn-keypad {
+  display: block;
+  margin-left: 5px;
+  float: left;
+  width: 60px;
+  height: 40px; }
+  .btn-keypad i {
+    font-style: normal; }
+
+.predictions {
+  float: left; }

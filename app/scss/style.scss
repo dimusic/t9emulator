@@ -1,0 +1,41 @@
+@import "border-box";
+@import "clearfix";
+
+$keypad-btn-width: 60px;
+$keypad-btn-height: 40px;
+$keypad-btn-margin: 5px;
+
+.app-wrap{
+	float: left;
+}
+.num-str-input{
+	width: $keypad-btn-width * 3 + $keypad-btn-margin * 2;
+	margin-bottom: $keypad-btn-margin;
+	padding: 2px 5px;
+	font-size: 16px;
+	border: 1px solid #bababa;
+}
+.actions{
+	margin-top: $keypad-btn-margin;
+	margin-bottom: $keypad-btn-margin;
+}
+.keypad-row{
+	@extend %clearfix;
+
+	margin-bottom: $keypad-btn-margin;
+	margin-left: -$keypad-btn-margin;
+}
+.btn-keypad{
+	display: block;
+	margin-left: $keypad-btn-margin;
+	float: left;
+	width: $keypad-btn-width;
+	height: $keypad-btn-height;
+
+	i{
+		font-style: normal;
+	}
+}
+.predictions{
+	float: left;
+}

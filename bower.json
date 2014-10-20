@@ -1,0 +1,17 @@
+{
+  "name": "t9emulator",
+  "version": "0.0.1",
+  "authors": [
+    "Dmitry Malkov <targtn@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}
