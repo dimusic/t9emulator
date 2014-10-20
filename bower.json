@@ -13,5 +13,8 @@
     "test",
     "tests"
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "qunit": "~1.15.0"
+  }
 }
