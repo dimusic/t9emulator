@@ -137,7 +137,7 @@
             var currentWord = this.getCurrentWord(),
                 predictions = this.autocompletePredictions;
 
-            if (currentWord.length > 2) {
+            if (currentWord.length > 3) {
                 predictions = predictions.filter(function (el) {
                     return el !== currentWord
                         && el.length >= currentWord.length
@@ -267,7 +267,7 @@
             depth = depth || 0;
 
         // force exact for words with less than 3 characters
-        if (numStr.length < 3) {
+        if (numStr.length <= 3) {
             exact = true;
         }
 
